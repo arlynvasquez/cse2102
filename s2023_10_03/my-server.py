@@ -9,7 +9,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         i = i+1
         self.send_response(HTTPStatus.OK)
         self.end_headers()
-        my_string = 'Hello world: ' + str(i)
+        my_string = 'Hello world, hey everyone: ' + str(i)
         self.wfile.write(bytes(my_string, 'utf-8'))
 
 
@@ -24,5 +24,5 @@ httpd.serve_forever()
 HTTP/1.0 200 OK
 Date: Tue, 11 Apr 2017 15:36:49 GMT
 Server: SimpleHTTP/0.6 Python/3.5.2
-Hello world
+Hello world, hey everyone
 '''
