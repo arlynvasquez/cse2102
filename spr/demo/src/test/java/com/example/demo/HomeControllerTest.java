@@ -17,13 +17,30 @@ public class HomeControllerTest {
   @Autowired
   private MockMvc mockMvc;   // 
 
- /* @Test
-  public void testNotHomePage() throws Exception {
-    mockMvc.perform(get("/not_home"))   
+ @Test
+  public void testLoginPage() throws Exception {
+    mockMvc.perform(get("/"))   
       .andExpect(status().isOk()) 
-      .andExpect(view().name("not_home"))
+      .andExpect(view().name("login"))
       .andExpect(content().string(       
-          containsString("Not Home - BLAH Welcome")));
+          containsString("Login")));
   }
-  */
+
+  @Test
+  public void testHomePage() throws Exception {
+    mockMvc.perform(get("/home"))   
+      .andExpect(status().isOk()) 
+      .andExpect(view().name("home"))
+      .andExpect(content().string(       
+          containsString("Home")));
+  }
+
+  @Test
+  public void testQuizPage() throws Exception {
+    mockMvc.perform(get("/quiz"))   
+      .andExpect(status().isOk()) 
+      .andExpect(view().name("quiz"))
+      .andExpect(content().string(       
+          containsString("Quiz #")));
+  }
 }
