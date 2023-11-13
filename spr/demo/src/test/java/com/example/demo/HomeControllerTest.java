@@ -15,7 +15,17 @@ import org.springframework.test.web.servlet.MockMvc;
 public class HomeControllerTest {
 
   @Autowired
-  private MockMvc mockMvc;   // 
+  private MockMvc mockMvc;   
+
+    @MockBean
+    private EmailService emailService;
+
+    @MockBean
+    private PasswordService passwordService;
+
+    @MockBean
+    private QuizService quizService;
+
 
  @Test
   public void testLoginPage() throws Exception {

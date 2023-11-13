@@ -2,6 +2,7 @@
 <html>
   <head>
     <title> Login</title>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
 
   </head>
 
@@ -10,11 +11,11 @@
     <center>
       <h3>Login</h3>
 
-                <form>
-                  <label for="username">Username:</label><br>
-                  <input type="text" id="username" name="username"><br><br>
+                <form th:action="/login" th:objects = "${loginCredentials}" method="POST">
+                  <label for="email">email:</label><br>
+                  <input type="text" id="email" th:field="*{email}"><br><br>
                   <label for="pwd">Password:</label><br>
-                  <input type="password" id="pwd" name="pwd"><br><br>
+                  <input type="password" id="pwd" th:field="*{password}"><br><br>
                 </form>
                 <tr>
                   <td>
