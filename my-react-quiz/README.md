@@ -2,14 +2,10 @@
 
 # Create a github clone
 
+Load this program onto your local machine. This can be done by running this command in the terminal:
 ```
 git clone https://github.com/arlynvasquez/cse2102/tree/main/my-react-quiz
 ```
-
-## 1.1 Clone Repository
-
-Load this program onto your local machine. This can be done by running this command in the terminal:
-
 
 # Adjust Directory
 
